@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102a24">
+<meta name="description" content="Propwest Realty — discover homes, plots and property opportunities with a team you can trust.">
+<title>Propwest Realty | Find a place to call yours</title>
+<style>
+:root{--green:#123b31;--green2:#1e5948;--gold:#d8b36a;--cream:#f7f5ef;--ink:#1c2925;--muted:#68746e;--white:#fff;--line:#e5e5dc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e9e9e2}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.7px;font-size:1.22rem}.brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:var(--green);color:var(--gold);font-size:1.25rem}.brand small{display:block;font-size:.65rem;font-weight:600;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:-3px}.navlinks{display:flex;align-items:center;gap:26px;font-size:.91rem;font-weight:650}.navlinks a:hover{color:var(--green2)}.nav-cta,.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;border:0;border-radius:999px;padding:13px 20px;background:var(--green);color:#fff;font-weight:750;cursor:pointer;transition:.2s}.nav-cta:hover,.btn:hover{background:var(--green2);transform:translateY(-1px)}.menu{display:none;background:none;border:0;font-size:1.7rem;color:var(--green)}
+.hero{background:var(--green);color:#fff;overflow:hidden;position:relative}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:45px;align-items:center;min-height:590px;padding:62px 0}.eyebrow{color:var(--gold);font-size:.77rem;letter-spacing:2.4px;font-weight:800;text-transform:uppercase}.hero h1{font-size:clamp(2.7rem,5.4vw,5rem);line-height:1.04;letter-spacing:-3px;margin:17px 0 22px;max-width:620px}.hero h1 em{font-family:Georgia,serif;color:var(--gold);font-weight:500}.hero p{color:#d7e2dc;max-width:500px;font-size:1.05rem}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:29px}.btn.gold{background:var(--gold);color:#17352b}.btn.ghost{background:transparent;border:1px solid #8da49b;color:white}.hero-note{display:flex;align-items:center;gap:13px;margin-top:34px;color:#d5e0db;font-size:.88rem}.dots{display:flex}.dots span{width:29px;height:29px;border:2px solid var(--green);border-radius:50%;background:#d8b36a;margin-left:-7px}.dots span:first-child{margin-left:0;background:#dce6df}.dots span:nth-child(2){background:#a4b8ac}.dots span:nth-child(3){background:#e4cda0}
+.hero-art{position:relative;min-height:430px;border-radius:24px;overflow:hidden;background:#d4d8c9}.hero-art img{width:100%;height:450px;object-fit:cover;display:block}.art-label{position:absolute;bottom:20px;left:20px;right:20px;background:rgba(255,255,255,.94);color:var(--ink);padding:17px 20px;border-radius:15px;display:flex;justify-content:space-between;align-items:center;gap:12px}.art-label strong{display:block;font-size:1rem}.art-label span{font-size:.82rem;color:var(--muted)}.price{color:var(--green2);font-weight:850}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:28px 0;border-bottom:1px solid var(--line)}.stat{padding:5px 18px;border-right:1px solid var(--line)}.stat:first-child{padding-left:0}.stat:last-child{border:0}.stat strong{font-size:1.7rem;color:var(--green);display:block;letter-spacing:-1px}.stat span{font-size:.87rem;color:var(--muted)}
+section{padding:86px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:32px}.section-head h2{font-size:clamp(2rem,3.4vw,3.1rem);line-height:1.1;letter-spacing:-1.7px;margin:10px 0 0;color:var(--green)}.section-head p{max-width:450px;color:var(--muted);margin:0}.kicker{color:#9c7837;font-size:.75rem;font-weight:850;letter-spacing:2px;text-transform:uppercase}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}.filter{border:1px solid var(--line);border-radius:99px;padding:9px 17px;background:#fff;color:#4b5b54;font-weight:700;cursor:pointer}.filter.active,.filter:hover{background:var(--green);color:#fff;border-color:var(--green)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.property{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;transition:.22s}.property:hover{transform:translateY(-5px);box-shadow:0 16px 40px #183d2b12}.property-img{height:225px;position:relative;background:#e8e7de}.property-img img{width:100%;height:100%;object-fit:cover;display:block}.tag{position:absolute;top:14px;left:14px;border-radius:99px;background:#fff;padding:7px 11px;font-size:.72rem;font-weight:800;color:var(--green)}.property-body{padding:20px}.property-body h3{margin:0 0 5px;font-size:1.18rem;letter-spacing:-.4px}.location{color:var(--muted);font-size:.86rem}.features{display:flex;gap:14px;flex-wrap:wrap;color:#5f6b65;font-size:.8rem;margin:15px 0;padding-bottom:15px;border-bottom:1px solid var(--line)}.property-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px}.property-bottom strong{font-size:1.05rem;color:var(--green)}.small-link{font-weight:800;color:var(--green2);font-size:.85rem}
+.empty-note{margin-top:16px;font-size:.83rem;color:var(--muted)}
+.about{background:var(--cream)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}.about-visual{position:relative;min-height:400px;border-radius:22px;overflow:hidden;background:#d7d9ce}.about-visual img{width:100%;height:420px;object-fit:cover;display:block}.about-badge{position:absolute;right:18px;bottom:18px;background:var(--gold);color:var(--green);padding:17px 20px;border-radius:15px;font-weight:850}.about-copy h2{font-size:clamp(2.1rem,4vw,3.4rem);line-height:1.08;letter-spacing:-1.8px;color:var(--green);margin:12px 0 18px}.about-copy p{color:var(--muted)}.benefits{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0}.benefit{display:flex;gap:11px;align-items:flex-start}.check{flex:0 0 27px;height:27px;display:grid;place-items:center;background:#e4eadf;color:var(--green);border-radius:50%;font-weight:900}.benefit strong{display:block;font-size:.92rem}.benefit span{font-size:.81rem;color:var(--muted)}
+.channel{background:#fff}.channel-card{display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center;padding:38px;border-radius:22px;background:var(--green);color:#fff}.channel-card h2{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.12;margin:9px 0}.channel-card p{color:#d2ded7;margin-bottom:0}.play{width:76px;height:76px;display:grid;place-items:center;background:var(--gold);color:var(--green);border-radius:50%;font-size:1.7rem}
+.contact{background:var(--cream)}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px}.contact h2{font-size:clamp(2.2rem,4vw,3.5rem);line-height:1.05;letter-spacing:-1.8px;color:var(--green);margin:12px 0 18px}.contact p{color:var(--muted)}.contact-methods{display:grid;gap:12px;margin-top:25px}.method{display:flex;gap:13px;align-items:center;background:#fff;border:1px solid var(--line);padding:14px;border-radius:13px}.method-icon{width:42px;height:42px;border-radius:12px;background:#e7eee7;color:var(--green);display:grid;place-items:center;font-size:1.2rem}.method small{display:block;color:var(--muted)}.method strong{display:block}.contact-form{background:#fff;border:1px solid var(--line);padding:28px;border-radius:19px;box-shadow:0 12px 35px #203e2b08}.contact-form h3{margin:0 0 20px;color:var(--green);font-size:1.35rem}.field{display:grid;gap:7px;margin-bottom:15px}.field label{font-size:.83rem;font-weight:750}.field input,.field select{width:100%;padding:13px 14px;border:1px solid #dfe3dc;border-radius:10px;background:#fff;outline-color:var(--green2)}.contact-form .btn{width:100%}.form-hint{font-size:.78rem;color:var(--muted);margin:12px 0 0}
+footer{background:#0d2821;color:#e5eee9;padding:28px 0}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-row p{font-size:.82rem;color:#b5c8bf;margin:0}.footer-links{display:flex;gap:18px;font-size:.85rem}
+.whatsapp{position:fixed;right:20px;bottom:20px;z-index:15;width:58px;height:58px;display:grid;place-items:center;background:#20bf65;color:white;border-radius:50%;font-size:1.7rem;box-shadow:0 8px 24px #0002}.whatsapp:hover{transform:scale(1.05)}
+/* Photo manager: local preview only; real shared uploads require a backend. */
+.admin{padding:70px 0;background:#fff}.admin-box{border:1px dashed #b8c7bb;border-radius:18px;padding:25px;background:#fbfcf9}.admin-box h3{color:var(--green);margin-top:0}.admin-box p{color:var(--muted);font-size:.9rem}.admin-controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.admin-controls input[type=password]{padding:11px;border:1px solid var(--line);border-radius:9px;max-width:220px}.admin-controls input[type=file]{max-width:100%}.admin-preview{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.admin-preview img{width:100%;height:115px;object-fit:cover;border-radius:10px}.hidden{display:none!important}
+@media(max-width:850px){.navlinks{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;padding:20px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:17px}.navlinks.open{display:flex}.menu{display:block}.nav-cta{display:none}.hero-grid{grid-template-columns:1fr;padding:50px 0;gap:30px}.hero-art img{height:350px}.hero-art{min-height:350px}.cards{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.about-visual img{height:350px}.channel-card{padding:28px}.admin-preview{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.hero h1{letter-spacing:-1.7px}.hero-grid{min-height:auto}.hero-art img{height:290px}.art-label{left:10px;right:10px;bottom:10px;padding:12px}.stats{gap:7px}.stat{padding:5px 8px}.stat strong{font-size:1.35rem}.stat span{font-size:.75rem}.stats .stat:first-child{padding-left:0}section{padding:62px 0}.section-head{display:block}.section-head p{margin-top:14px}.cards{grid-template-columns:1fr}.property-img{height:235px}.about-grid{gap:28px}.benefits{grid-template-columns:1fr}.channel-card{grid-template-columns:1fr}.play{width:58px;height:58px}.contact-form{padding:20px}.admin-preview{grid-template-columns:repeat(2,1fr)}.footer-row{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Propwest Realty home"><span class="brand-mark">⌂</span><span>Propwest Realty<small>Find your place</small></span></a>
+    <nav class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#properties">Properties</a><a href="#about">About us</a><a href="#channel">Property tours</a><a href="#contact">Contact</a></nav>
+    <a class="nav-cta" href="https://wa.me/919890914333?text=Hello%20Propwest%20Realty%2C%20I%20am%20interested%20in%20a%20property." target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">A better place to begin</div>
+      <h1>Find a place to call <em>yours.</em></h1>
+      <p>From your first home to your next big investment, Propwest Realty helps you explore property opportunities with confidence.</p>
+      <div class="hero-actions"><a class="btn gold" href="#properties">Explore properties ↘</a><a class="btn ghost" href="#contact">Talk to our team</a></div>
+      <div class="hero-note"><div class="dots"><span></span><span></span><span></span></div><span>Personal guidance. Clear conversations. Better decisions.</span></div>
+    </div>
+    <div class="hero-art">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85" alt="Modern home exterior" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85'">
+      <div class="art-label"><div><strong>Your next chapter starts here</strong><span>Homes · Plots · Property guidance</span></div><span class="price">Propwest Realty</span></div>
+    </div>
+  </div>
+</section>
+<div class="wrap stats">
+  <div class="stat"><strong>People first</strong><span>Advice built around your needs</span></div>
+  <div class="stat"><strong>Local insight</strong><span>Explore the right opportunities</span></div>
+  <div class="stat"><strong>Clear support</strong><span>Guidance from first call to next step</span></div>
+</div>
+<section id="properties">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker">Explore opportunities</div><h2>Find a property that<br>feels like the one.</h2></div><p>Browse our sample categories below. Property photos, prices and details can be added by the admin when they're ready.</p></div>
+    <div class="filters" role="group" aria-label="Filter properties"><button class="filter active" data-filter="all">All properties</button><button class="filter" data-filter="home">Homes</button><button class="filter" data-filter="plot">Plots</button><button class="filter" data-filter="commercial">Commercial</button></div>
+    <div class="cards" id="propertyCards">
+      <article class="property" data-type="home"><div class="property-img"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Contemporary home" loading="lazy"><span class="tag">Homes</span></div><div class="property-body"><h3>Find your family home</h3><div class="location">📍 Location details coming soon</div><div class="features"><span>Comfortable living</span><span>•</span><span>Modern spaces</span></div><div class="property-bottom"><strong>Price on request</strong><a class="small-link" href="#contact">Enquire ↗</a></div></div></article>
+      <article class="property" data-type="plot"><div class="property-img"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80" alt="Open land and greenery" loading="lazy"><span class="tag">Plots</span></div><div class="property-body"><h3>Discover your ideal plot</h3><div class="location">📍 Location details coming soon</div><div class="features"><span>Build your future</span><span>•</span><span>Explore locations</span></div><div class="property-bottom"><strong>Price on request</strong><a class="small-link" href="#contact">Enquire ↗</a></div></div></article>
+      <article class="property" data-type="commercial"><div class="property-img"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="Modern commercial building" loading="lazy"><span class="tag">Commercial</span></div><div class="property-body"><h3>Grow with the right space</h3><div class="location">📍 Location details coming soon</div><div class="features"><span>Business spaces</span><span>•</span><span>Investment options</span></div><div class="property-bottom"><strong>Price on request</strong><a class="small-link" href="#contact">Enquire ↗</a></div></div></article>
+    </div>
+    <p class="empty-note">These are demonstration cards, not confirmed listings. Replace them with verified properties before publishing.</p>
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=85" alt="Warm modern home interior" loading="lazy"><div class="about-badge">Your goals. Our guidance.</div></div>
+    <div class="about-copy"><div class="kicker">Why Propwest Realty</div><h2>Property decisions should feel simpler.</h2><p>Buying, selling or investing is a big step. Our goal is to make your property journey feel more personal, clear and confident — one conversation at a time.</p><div class="benefits"><div class="benefit"><span class="check">✓</span><div><strong>Friendly guidance</strong><span>Talk through your needs</span></div></div><div class="benefit"><span class="check">✓</span><div><strong>Options that fit</strong><span>Start with your priorities</span></div></div><div class="benefit"><span class="check">✓</span><div><strong>Helpful updates</strong><span>Keep the conversation moving</span></div></div><div class="benefit"><span class="check">✓</span><div><strong>Personal service</strong><span>Real people, real conversations</span></div></div></div><a class="btn" href="#contact">Let's talk about property ↗</a></div>
+  </div>
+</section>
+<section class="channel" id="channel">
+  <div class="wrap"><div class="channel-card"><div><div class="eyebrow">See it before you visit</div><h2>Property Tour by Gajanan</h2><p>Follow the channel for property walkthroughs, useful details and new opportunities. Add your YouTube channel link before publishing.</p><div style="margin-top:22px"><a class="btn gold" href="#contact">Ask about a property ↗</a></div></div><div class="play" aria-hidden="true">▶</div></div></div>
+</section>
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div><div class="kicker">Let's connect</div><h2>Have a property in mind?</h2><p>Tell us what you're looking for. We'll make it easy to start the conversation.</p>
+      <div class="contact-methods">
+        <a class="method" href="tel:+919921914333"><span class="method-icon">☎</span><span><small>Call us</small><strong>99219 14333</strong></span></a>
+        <a class="method" href="https://wa.me/919890914333?text=Hello%20Propwest%20Realty%2C%20I%20would%20like%20to%20enquire." target="_blank" rel="noopener"><span class="method-icon">◉</span><span><small>WhatsApp us</small><strong>98909 14333</strong></span></a>
+        <div class="method"><span class="method-icon">▶</span><span><small>Our property channel</small><strong>Property Tour by Gajanan</strong></span></div>
+      </div>
+    </div>
+    <form class="contact-form" id="enquiryForm"><h3>Send an enquiry</h3>
+      <div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="Enter your name" required></div>
+      <div class="field"><label for="phone">Your phone number</label><input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required></div>
+      <div class="field"><label for="interest">I'm interested in</label><select id="interest" name="interest"><option>Buying a home</option><option>Buying a plot</option><option>Commercial property</option><option>Selling a property</option><option>General enquiry</option></select></div>
+      <button class="btn" type="submit">Send enquiry on WhatsApp ↗</button>
+      <p class="form-hint">This opens WhatsApp with your message ready to send. Your details are not stored on this website.</p>
+    </form>
+  </div>
+</section>
+<section class="admin" id="admin">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker">For the website admin</div><h2>Property photos can come later.</h2></div><p>This simple preview tool lets you choose photos on your own device to preview them. It does not upload photos to a live website.</p></div>
+    <div class="admin-box"><h3>Photo preview area</h3><p>Choose images to preview how property photos might look. This demo area is not a secure admin login or shared upload system; online photo management needs a hosting/backend setup.</p>
+      <div class="admin-controls"><label for="photoUpload"><strong>Select property photos:</strong></label><input id="photoUpload" type="file" accept="image/*" multiple></div>
+      <div id="adminPreview" class="admin-preview"></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap footer-row"><a class="brand" href="#home"><span class="brand-mark">⌂</span><span>Propwest Realty<small style="color:#b5c8bf">Find your place</small></span></a><p>© <span id="year"></span> Propwest Realty. Made with care.</p><div class="footer-links"><a href="#properties">Properties</a><a href="#contact">Contact</a><a href="#admin">Admin photos</a></div></div></footer>
+<a class="whatsapp" href="https://wa.me/919890914333?text=Hello%20Propwest%20Realty!" target="_blank" rel="noopener" aria-label="Chat with Propwest Realty on WhatsApp">◉</a>
+<script>
+const menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('navlinks');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  document.querySelectorAll('.property').forEach(card=>{card.style.display=(btn.dataset.filter==='all'||card.dataset.type===btn.dataset.filter)?'':'none';});
+}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('enquiryForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim(),phone=document.getElementById('phone').value.trim(),interest=document.getElementById('interest').value;
+  const msg=`Hello Propwest Realty! My name is ${name}. My phone number is ${phone}. I am interested in: ${interest}. Please contact me.`;
+  window.open('https://wa.me/919890914333?text='+encodeURIComponent(msg),'_blank','noopener');
+});
+const upload=document.getElementById('photoUpload'), preview=document.getElementById('adminPreview');
+upload.addEventListener('change',()=>{
+  preview.innerHTML='';
+  [...upload.files].forEach(file=>{
+    if(!file.type.startsWith('image/'))return;
+    const img=document.createElement('img');img.alt=file.name;img.src=URL.createObjectURL(file);preview.appendChild(img);
+  });
+});
+</script>
+</body>
+</html>
